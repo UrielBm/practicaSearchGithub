@@ -39,7 +39,7 @@ const handleSetSubmit = (e) => {
 };
 
 inputName.addEventListener("focus", () => {
-  window.innerWidth < 720 && (card.className = "hiddenCard");
+  screen.width <= 720 && (card.className = "hiddenCard");
 });
 // añadiendo evento de Submit al form
 searchForm.addEventListener("submit", (e) => handleSetSubmit(e));
