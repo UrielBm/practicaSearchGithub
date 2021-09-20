@@ -127,6 +127,10 @@ body .wrapperMain .Card .wrapperInfo .info #location, body .wrapperMain .hiddenC
 }
 body .wrapperMain .Card .wrapperInfo .AboutMe, body .wrapperMain .hiddenCard .wrapperInfo .AboutMe {
   text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
   margin: 0.6rem 0;
 }
 body .wrapperMain .Card .wrapperInfo .AboutMe p:first-child, body .wrapperMain .hiddenCard .wrapperInfo .AboutMe p:first-child {
