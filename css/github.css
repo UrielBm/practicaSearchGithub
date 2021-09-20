@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
+body {
+  background: #032862;
+  background: linear-gradient(144deg, #032862 0%, #040d21 15%, #040d21 82%, #441e46 100%);
+  font-family: "Prompt", sans-serif !important;
+}
+body .wrapperMain {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .wrapperMain .title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffeded;
+}
+body .wrapperMain .form {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body .wrapperMain .form .wrapperInput {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapperMain .form .wrapperInput .label {
+  display: block;
+  text-align: start;
+  color: #ffeded;
+  margin-bottom: 0.3rem;
+}
+body .wrapperMain .form .wrapperInput .input {
+  width: 250px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 2rem;
+  border: none;
+  transition: width ease-in 1.2s, background-color ease-in-out 1s;
+}
+body .wrapperMain .form .wrapperInput .input::placeholder {
+  color: #441e46;
+}
+body .wrapperMain .form .wrapperInput .input:focus {
+  width: 100%;
+  background-color: #040d21;
+  color: #ffeded;
+  transition: width ease-in 1.2s, background-color ease-in-out 1s;
+  outline: none;
+  border: 1px solid #441e46;
+  box-shadow: 0 0 10px #032862;
+}
+body .wrapperMain .form .actionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 1.8rem;
+  border: 2px solid #441e46;
+  color: #ffeded;
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+  transition: width ease-in-out 0.6s, background-color ease-in-out 0.6s;
+}
+body .wrapperMain .form .actionButton:hover {
+  background-color: #441e46;
+  cursor: pointer;
+  width: 160px;
+  transition: width ease-in-out 0.6s, background-color ease-in-out 0.6s;
+}
+body .wrapperMain .form .actionButton .icon {
+  margin-right: 0.3rem;
+  fill: #ffeded;
+}
+body .wrapperMain .Card, body .wrapperMain .hiddenCard {
+  font-family: "Roboto Mono", monospace;
+  width: 340px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+  border: 1px solid #ffeded;
+  border-radius: 1rem;
+  box-shadow: -1px 3px 16px 3px #032862;
+}
+body .wrapperMain .Card .wrapperPicture, body .wrapperMain .hiddenCard .wrapperPicture {
+  position: relative;
+  margin: -50px auto 2rem auto;
+  width: 100px;
+}
+body .wrapperMain .Card .wrapperPicture .picture, body .wrapperMain .hiddenCard .wrapperPicture .picture {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 4px 4px 7px 0px #ffeded;
+}
+body .wrapperMain .Card .wrapperInfo, body .wrapperMain .hiddenCard .wrapperInfo {
+  width: 100%;
+  color: #ffeded;
+}
+body .wrapperMain .Card .wrapperInfo .info, body .wrapperMain .hiddenCard .wrapperInfo .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.6rem 0;
+  font-size: 0.85rem;
+  text-align: start;
+  font-weight: 300;
+}
+body .wrapperMain .Card .wrapperInfo .info::first-letter, body .wrapperMain .hiddenCard .wrapperInfo .info::first-letter {
+  text-transform: uppercase;
+}
+body .wrapperMain .Card .wrapperInfo .info p:first-child, body .wrapperMain .hiddenCard .wrapperInfo .info p:first-child {
+  font-size: 1rem;
+  font-weight: 500;
+}
+body .wrapperMain .Card .wrapperInfo .info #location, body .wrapperMain .hiddenCard .wrapperInfo .info #location {
+  width: 60%;
+  text-align: end;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body .wrapperMain .Card .wrapperInfo .AboutMe, body .wrapperMain .hiddenCard .wrapperInfo .AboutMe {
+  text-align: start;
+  margin: 0.6rem 0;
+}
+body .wrapperMain .Card .wrapperInfo .AboutMe p:first-child, body .wrapperMain .hiddenCard .wrapperInfo .AboutMe p:first-child {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+body .wrapperMain .Card .wrapperInfo .AboutMe #bio, body .wrapperMain .hiddenCard .wrapperInfo .AboutMe #bio {
+  text-align: justify;
+  font-size: 0.75rem;
+  font-style: oblique;
+  line-height: 1.5;
+  word-spacing: 6px;
+  font-weight: 300;
+}
+body .wrapperMain .Card .wrapperSocialNetwork, body .wrapperMain .hiddenCard .wrapperSocialNetwork {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+body .wrapperMain .Card .wrapperSocialNetwork .link_none, body .wrapperMain .hiddenCard .wrapperSocialNetwork .link_none {
+  display: none;
+}
+body .wrapperMain .Card .wrapperSocialNetwork .link:first-child, body .wrapperMain .hiddenCard .wrapperSocialNetwork .link:first-child {
+  width: 60px;
+}
+body .wrapperMain .Card .wrapperSocialNetwork .link:first-child .network, body .wrapperMain .hiddenCard .wrapperSocialNetwork .link:first-child .network {
+  width: 100%;
+}
+body .wrapperMain .Card .wrapperSocialNetwork .link, body .wrapperMain .hiddenCard .wrapperSocialNetwork .link {
+  width: 25px;
+}
+body .wrapperMain .Card .wrapperSocialNetwork .link .network, body .wrapperMain .hiddenCard .wrapperSocialNetwork .link .network {
+  width: 100%;
+}
+body .wrapperMain .hiddenCard {
+  display: none;
+}
+body .wrapperMain .wrapperAustronaut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body .wrapperMain .wrapperAustronaut .austronaut {
+  width: 250px;
+}
+@media only screen and (max-width: 550px) {
+  body .wrapperMain {
+    padding: 1rem 0;
+    justify-content: flex-start;
+  }
+  body .wrapperMain .title {
+    font-size: 1.4rem;
+  }
+  body .wrapperMain .form {
+    width: 360px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body .wrapperMain .form .wrapperInput {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  body .wrapperMain .wrapperAustronaut {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  body .wrapperMain .wrapperAustronaut .austronaut {
+    width: 140px;
+  }
+}
+
+/*# sourceMappingURL=github.css.map */

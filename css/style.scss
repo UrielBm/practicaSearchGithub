@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
+$family: "Prompt", sans-serif;
+$FontData: "Roboto Mono", monospace;
+$color1: #ffeded;
+$colorbg1: rgba(3, 40, 98, 1);
+$colorbg2: rgba(4, 13, 33, 1);
+$colorbg3: rgba(68, 30, 70, 1);
+body {
+  background: rgb(3, 40, 98);
+  background: linear-gradient(
+    144deg,
+    $colorbg1 0%,
+    $colorbg2 15%,
+    $colorbg2 82%,
+    $colorbg3 100%
+  );
+  font-family: $family !important;
+  .wrapperMain {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: $color1;
+    }
+    .form {
+      display: flex;
+      width: 600px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: flex-end;
+      .wrapperInput {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        .label {
+          display: block;
+          text-align: start;
+          color: $color1;
+          margin-bottom: 0.3rem;
+        }
+        .input {
+          width: 250px;
+          padding: 0.3rem 0.5rem;
+          border-radius: 2rem;
+          border: none;
+          transition: width ease-in 1.2s, background-color ease-in-out 1s;
+          &::placeholder {
+            color: $colorbg3;
+          }
+          &:focus {
+            width: 100%;
+            background-color: $colorbg2;
+            color: $color1;
+            transition: width ease-in 1.2s, background-color ease-in-out 1s;
+            outline: none;
+            border: 1px solid $colorbg3;
+            box-shadow: 0 0 10px $colorbg1;
+          }
+        }
+      }
+      .actionButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 1.8rem;
+        border: 2px solid rgba(68, 30, 70, 1);
+        color: $color1;
+        border-radius: 2rem;
+        padding: 0.3rem 0.5rem;
+        background-color: transparent;
+        transition: width ease-in-out 0.6s, background-color ease-in-out 0.6s;
+        &:hover {
+          background-color: $colorbg3;
+          cursor: pointer;
+          width: 160px;
+          transition: width ease-in-out 0.6s, background-color ease-in-out 0.6s;
+        }
+        .icon {
+          margin-right: 0.3rem;
+          fill: $color1;
+        }
+      }
+    }
+    .Card {
+      font-family: $FontData;
+      width: 340px;
+      margin: 4rem auto 0 auto;
+      padding: 0 1rem;
+      border: 1px solid $color1;
+      border-radius: 1rem;
+      box-shadow: -1px 3px 16px 3px $colorbg1;
+      .wrapperPicture {
+        position: relative;
+        margin: -50px auto 2rem auto;
+        width: 100px;
+        .picture {
+          width: 100%;
+          border-radius: 50%;
+          box-shadow: 4px 4px 7px 0px $color1;
+        }
+      }
+      .wrapperInfo {
+        width: 100%;
+        color: $color1;
+        .info {
+          display: flex;
+          justify-content: space-between;
+          margin: 0.6rem 0;
+          font-size: 0.85rem;
+          text-align: start;
+          font-weight: 300;
+          &::first-letter {
+            text-transform: uppercase;
+          }
+          p:first-child {
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          #location {
+            width: 60%;
+            text-align: end;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .AboutMe {
+          text-align: start;
+          margin: 0.6rem 0;
+          p:first-child {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+          }
+          #bio {
+            text-align: justify;
+            font-size: 0.75rem;
+            font-style: oblique;
+            line-height: 1.5;
+            word-spacing: 6px;
+            font-weight: 300;
+          }
+        }
+      }
+      .wrapperSocialNetwork {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 0;
+        .link_none {
+          display: none;
+        }
+        .link:first-child {
+          width: 60px;
+          .network {
+            width: 100%;
+          }
+        }
+        .link {
+          width: 25px;
+          .network {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .hiddenCard {
+      @extend .Card;
+      display: none;
+    }
+    .wrapperAustronaut {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .austronaut {
+        width: 250px;
+      }
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .wrapperMain {
+      padding: 1rem 0;
+      justify-content: flex-start;
+      .title {
+        font-size: 1.4rem;
+      }
+      .form {
+        width: 360px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wrapperInput {
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0.5rem;
+        }
+      }
+      .wrapperAustronaut {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        .austronaut {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
