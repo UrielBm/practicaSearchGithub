@@ -28,8 +28,7 @@ const setDataHTML = (data) => {
   nombre.innerText = name === null ? "Desconocido" : name;
   Ulogin.innerText = login;
   firstChild.innerText = `Acerca de ${login} :`;
-  aboutMe.innerText =
-    bio === null ? "Ser o no ser una biografía, he ahí mi dilema." : bio;
+  aboutMe.innerText = bio === null ? "Aún sin biografía 👀" : bio;
   ubication.innerText =
     location === null ? "Ubicación desconocida..." : location;
   foll.innerText = `No. ${followers}`;
