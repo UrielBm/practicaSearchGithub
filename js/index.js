@@ -2,6 +2,7 @@
 const searchForm = document.querySelector("#searchForm");
 const loading = document.querySelector("#loading");
 const card = document.querySelector("#Card");
+const inputName = document.querySelector("#userName");
 //creación de la función para buscar usuario de GitHub
 const handleGetGithubUser = async (userName) => {
   try {
@@ -28,7 +29,6 @@ const handleGetGithubUser = async (userName) => {
 // creación del método submit
 const handleSetSubmit = (e) => {
   e.preventDefault();
-  const inputName = document.querySelector("#userName");
   const userName = inputName.value;
   if (userName.trim() === "") {
     errorMessage();
@@ -37,5 +37,9 @@ const handleSetSubmit = (e) => {
   handleGetGithubUser(userName);
   inputName.value = "";
 };
+
+inputName.addEventListener("focus", () => {
+  window.innerWidth < 720 && (card.className = "hiddenCard");
+});
 // añadiendo evento de Submit al form
 searchForm.addEventListener("submit", (e) => handleSetSubmit(e));
